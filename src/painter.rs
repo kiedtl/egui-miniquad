@@ -90,6 +90,10 @@ impl Painter {
         }
     }
 
+    pub fn register_texture(&mut self, eguiid: egui::TextureId, mqid: miniquad::TextureId) {
+        _ = self.textures.insert(eguiid, mqid);
+    }
+
     pub fn set_texture(
         &mut self,
         ctx: &mut dyn RenderingBackend,

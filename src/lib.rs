@@ -157,6 +157,10 @@ impl EguiMq {
         }
     }
 
+    pub fn register_texture(&mut self, eguiid: egui::TextureId, mqid: miniquad::TextureId) {
+        self.painter.register_texture(eguiid, mqid);
+    }
+
     /// Use this to open egui windows, panels etc.
     ///
     /// May only be used from inside the callback given to [`Self::run`].
